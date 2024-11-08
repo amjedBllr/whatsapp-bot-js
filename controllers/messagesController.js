@@ -3,13 +3,16 @@ let {mentionSender} = require('../handlers/salutationResponse')
 let randomPoem = require('../handlers/randomPoem')
 let mentionAll = require('../handlers/mentionAll')
 let topTen = require('../handlers/topTen')
-
-
-
+let bestPerson = require('../handlers/bestPerson')
+let playSong = require('../handlers/playSong')
 
 
 //? bots command key 
 let key = 'ريتسو'
+
+
+
+//? main 
 const messagesController = async (client,message) => {
 
     //* cheering the sender of the command !!
@@ -23,8 +26,8 @@ const messagesController = async (client,message) => {
             if(message.body.includes('شعر')) await randomPoem(message)
             else if(message.body.includes('كل')) await mentionAll(client,message)
             else if(message.body.includes('توب 10')) await topTen(client,message)
-
-
+            else if(/[اأ]فضل/.test(message.body)) await bestPerson(client,message)
+            //else if(message.body.includes('شغل')) await playSong(client,message)
         }
     }
     
