@@ -5,7 +5,7 @@ let mentionAll = require('../handlers/mentionAll')
 let topTen = require('../handlers/topTen')
 let bestPerson = require('../handlers/bestPerson')
 let playSong = require('../handlers/playSong')
-
+let gossip = require('../handlers/Gossip')
 
 //? bots command key 
 let key = 'ريتسو'
@@ -28,6 +28,7 @@ const messagesController = async (client,message) => {
             else if(message.body.includes('توب 10')) await topTen(client,message)
             else if(/[اأ]فضل/.test(message.body)) await bestPerson(client,message)
             //else if(message.body.includes('شغل')) await playSong(client,message)
+            else if(message.body.includes('نميمة')) await gossip(client,message)
         }
     }
     
