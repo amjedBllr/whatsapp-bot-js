@@ -29,7 +29,7 @@ const gossip = async (client, message) => {
             const text = `وللللللل ، @${users[0]} قال عن @${users[1]} ${bads[meanIndex]} 😬😂\nصح هذا الكلام ؟ 👀🕷️`;
 
             // Path to the specific .gif sticker file
-            const gifStickerPath = path.join(__dirname, '../data/images', 'gossip-laugh.gif');
+            const gifStickerPath = path.join(__dirname, '../data/images', 'laughing.gif');
             
             // Check if the .gif file exists
             if (fs.existsSync(gifStickerPath)) {
