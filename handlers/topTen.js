@@ -1,13 +1,16 @@
 
 
 const topTen = async (client , message)=>{
+    
 
     const chat = await message.getChat();
 
         if (chat.isGroup) {
-            let text = message.body.match(/توب.*?(?=,|\n|$)/i);
+            let text = message.body.match(/توب.*?(?=,|\.|،|\n|$)/i);
+
             text+=` ...
 `
+
             let mentions = [];
 
             let participants = chat.participants

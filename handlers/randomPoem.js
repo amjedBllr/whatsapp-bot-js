@@ -9,6 +9,7 @@ const randomPoem = async (message)=>{
     
     message.reply(`من عيني 🕷️✨
 يقول ${writer} :
+
 ${poem} ✨⛓️‍💥`)
 }
 

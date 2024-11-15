@@ -10,7 +10,6 @@ async function bestPerson(client,message) {
 
     for (let participant of chat.participants) if (participant.id.user===person) user = await client.getContactById(participant.id._serialized)
 
-    console.log(user)
     // Path to the specific .gif sticker file
     const gifStickerPath = path.join(__dirname, '../data/images', 'best-person.jpg');
             
